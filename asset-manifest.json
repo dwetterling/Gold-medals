@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Gold-medals/static/css/main.f855e6bc.css",
+    "main.js": "/Gold-medals/static/js/main.5a318c28.js",
+    "static/js/453.ed3810f9.chunk.js": "/Gold-medals/static/js/453.ed3810f9.chunk.js",
+    "static/media/logo.svg": "/Gold-medals/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Gold-medals/index.html",
+    "main.f855e6bc.css.map": "/Gold-medals/static/css/main.f855e6bc.css.map",
+    "main.5a318c28.js.map": "/Gold-medals/static/js/main.5a318c28.js.map",
+    "453.ed3810f9.chunk.js.map": "/Gold-medals/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.5a318c28.js"
+  ]
+}
