@@ -3,34 +3,30 @@ import React, { Component } from 'react';
 
 class Country extends Component {
    
-    state = {
-        word: 'United States',
-        gold: 0,
-        
-    }
+    
+
     renderNumber(gold) {
         return (gold ===undefined || gold ===null || gold === '' ? '0' : gold)
     }
-    handleClick = () => {
-        
-       
-        //the following will fail - we cannot access 'this' object
-        //this.state is undefined
-        console.log(this.state.gold);
-
-        this.setState({gold: this.state.gold + 1 })
-    }
-
     
+
     render() {
+        const {goldIncrement, goldDecrement, silverIncrement, silverDecrement, bronzeIncrement, bronzeDecrement, word } = this.props;
         return ( 
-      
             <>
-                
                 <div>
-                    {this.state.word}
+                    {word.name}
                 </div><div>
-                    Gold Medals Earned: {this.state.gold}  <button onClick={this.handleClick}>+</button>
+                    Gold Medals Earned: {word.gold}  <button onClick={() => goldIncrement(word.id)}>+</button><button disabled={word.gold <= 0} onClick={() => goldDecrement(word.id)}>-</button>
+                    </div>
+                    <div>
+                    Silver Medals Earned: {word.silver}  <button onClick={() => silverIncrement(word.id)}>+</button><button disabled={word.silver <= 0} onClick={() => silverDecrement(word.id)}>-</button>
+                    </div>
+                    <div>
+                    Bronze Medals Earned: {word.bronze}  <button onClick={() => bronzeIncrement(word.id)}>+</button><button disabled={word.bronze <= 0} onClick={() => bronzeDecrement(word.id)}>-</button>
+                </div>
+                <div>
+                Total Medals: {word.gold + word.silver + word.bronze}
                 </div>
                
                 </>
